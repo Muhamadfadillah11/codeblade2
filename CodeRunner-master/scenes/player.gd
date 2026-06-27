@@ -6,7 +6,7 @@ var is_moving = false
 var is_jumping = false
 var is_falling = false
 var is_dead = false
-
+var is_attacking =false
 var start_position = Vector2()
 
 @onready var spike_check = $SpikeCheck
@@ -318,3 +318,40 @@ func spike_ahead():
 	spike_check.force_raycast_update()
 
 	return spike_check.is_colliding()
+func tebas():
+	if is_attacking: return
+	is_attacking = true
+	$Visual/Knight.play("attack")
+	$SwordHitbox/CollisionShape2D.disabled = false
+	await get_tree().create_timer(0.2).timeout
+	$SwordHitbox/CollisionShape2D.disabled = true
+	is_attacking = false
+var command_queue = []
+var is_executing = false
+
+func _process(delta):
+	if command_queue.size() > 0 and not is_executing and not is_moving and is_jumping and not is_attacking and not is_falling:
+		execute_command(command_queue.pop_front())
+
+func execute_command(cmd: String):
+	is_executing = true
+	
+	match cmd:
+		"tebas":
+			tebas()
+			await get_tree().create_timer(0.3).timeout
+		"move_right":
+			await move_right()
+		"move_left":
+			await move_left()
+		"jump_right":
+			await jump_right()
+		"jump_left":
+			await jump_left()
+		"jump_up":
+			await jump_up()
+		"spike_ahead":
+			print("spike depan:", spike_ahead())
+		_:
+			print("perintah tak dikenal:", cmd)
+	is_executing = false

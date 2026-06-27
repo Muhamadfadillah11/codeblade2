@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bg213rhv5kor6"]
 
-[ext_resource type="Script" uid="uid://cc2dt8t8npftw" path="res://scripts/game.gd" id="1_yynsy"]
+[ext_resource type="Script" uid="uid://cijmjbbr8cjel" path="res://scripts/game.gd" id="1_yynsy"]
 [ext_resource type="Texture2D" uid="uid://625fm3eeyqht" path="res://assets/Background/Background.png" id="2_2r1tl"]
 [ext_resource type="PackedScene" uid="uid://ccpkyss6ki8ku" path="res://scenes/player.tscn" id="3_fcruq"]
 [ext_resource type="Texture2D" uid="uid://e68qefejimik" path="res://assets/Trees/bg/light_mountain.png" id="3_nkeig"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bscnx5m7wej0v" path="res://scenes/ui.tscn" id="7_2r1tl"]
 [ext_resource type="Texture2D" uid="uid://dqpofnultu3q" path="res://assets/Trees/Dark-Tree.png" id="7_nfihu"]
 [ext_resource type="Texture2D" uid="uid://c4p8451ygpudn" path="res://assets/tilemap/Tiles.png" id="8_nfihu"]
+[ext_resource type="PackedScene" uid="uid://cwf7tfhuph0ld" path="res://scenes/enemy.tscn" id="13_lgguw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g7tkf"]
 atlas = ExtResource("7_nfihu")
@@ -983,6 +984,9 @@ texture = ExtResource("5_j04vv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin" unique_id=251655662]
 position = Vector2(368, 249)
 shape = SubResource("CircleShape2D_1seuy")
+
+[node name="Enemy" parent="." unique_id=2118616187 instance=ExtResource("13_lgguw")]
+position = Vector2(208, 248)
 
 [node name="UI" parent="." unique_id=1980193790 instance=ExtResource("7_2r1tl")]
 

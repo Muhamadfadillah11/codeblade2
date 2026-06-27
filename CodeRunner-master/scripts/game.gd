@@ -29,6 +29,31 @@ var tutorial_data = {
 		{"text": "Di depan kita ada rintangan baru. Kamu bisa berjalan dengan [color=yellow]move_right()[/color] seperti tadi.", "mood": "idle"},
 		{"text": "Tapi jika ada duri atau tebing, gunakan perintah [color=yellow]jump_right()[/color] untuk melompat ke arah kanan!", "mood": "idle"},
 		{"text": "Kombinasikan [color=yellow]move_right()[/color] dan [color=yellow]jump_right()[/color] agar ksatria bisa mencapai portal dengan aman.", "mood": "idle"}
+	],
+
+	3: [
+		{"text": "Lihat, ada lebih banyak duri di jalur ini!", "mood": "idle"},
+		{"text": "Menulis [color=yellow]jump_right()[/color] satu per satu cukup melelahkan ya?", "mood": "idle"},
+		{"text": "Coba gunakan [color=blue]repeat(jumlah):[/color] lalu tulis perintah di bawahnya dengan indentasi (spasi) agar diulang otomatis.", "mood": "idle"},
+		{"text": "Contoh:\n[color=blue]repeat(2):[/color]\n    [color=yellow]move_right()[/color]\n    [color=yellow]jump_right()[/color]", "mood": "idle"},
+		{"text": "Susun kombinasi gerakan dan lompatan untuk mengumpulkan semua koin dan mencapai portal!", "mood": "idle"}
+	],
+
+	4: [
+		{"text": "Kerja bagus sejauh ini! Tapi duri di depan makin rapat.", "mood": "idle"},
+		{"text": "Ingat, satu [color=yellow]jump_right()[/color] hanya bisa melompati SATU duri sekaligus.", "mood": "idle"},
+		{"text": "Perhatikan jarak antar duri dengan teliti sebelum menulis kodemu.", "mood": "idle"},
+		{"text": "Gunakan [color=blue]repeat():[/color] untuk merangkai pola gerak-lompat yang berulang agar kodemu lebih rapi.", "mood": "idle"},
+		{"text": "Kumpulkan semua koin di sepanjang jalan, lalu capai portal di ujung level!", "mood": "idle"}
+	],
+
+	5: [
+		{"text": "Ini level paling menantang sejauh ini, hati-hati!", "mood": "idle"},
+		{"text": "Daripada menghitung jarak duri satu per satu, kamu bisa biarkan ksatria 'berpikir' sendiri.", "mood": "idle"},
+		{"text": "Coba gunakan [color=blue]if spike_ahead():[/color] lalu [color=yellow]jump_right()[/color], dan [color=blue]else:[/color] lalu [color=yellow]move_right()[/color].", "mood": "idle"},
+		{"text": "Dengan begitu, ksatria akan otomatis melompat hanya jika ada duri di depannya!", "mood": "idle"},
+		{"text": "Ulangi logika ini dengan [color=blue]repeat(jumlah):[/color] sampai ksatria mencapai portal.", "mood": "idle"},
+		{"text": "Selesaikan level ini untuk membuktikan kamu sudah menguasai dasar-dasar pemrograman!", "mood": "idle"}
 	]
 }
 

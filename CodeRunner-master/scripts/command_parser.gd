@@ -126,6 +126,14 @@ func parse_command_data(line):
 			"type": "jump"
 		}
 
+	# ==========================================
+	# TEBAS
+	# ==========================================
+	elif line == "tebas()" or line == "tebas":
+		
+		return{
+			"type": "attack"
+		}
 	return null
 
 

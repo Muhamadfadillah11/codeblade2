@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://hla06eltkwf" path="res://assets/tilemap/door.png" id="4_xwcet"]
 [ext_resource type="Texture2D" uid="uid://dlwbiyfwwkysf" path="res://assets/tilemap/Coin.png" id="5_p1ry8"]
 [ext_resource type="Texture2D" uid="uid://d2bu2g1sunhy8" path="res://assets/tilemap/spike.png" id="6_xlg7c"]
+[ext_resource type="PackedScene" uid="uid://cwf7tfhuph0ld" path="res://scenes/enemy.tscn" id="8_gee14"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xwcet"]
 
@@ -25,6 +26,7 @@ script = ExtResource("1_xlg7c")
 position = Vector2(314, 234)
 
 [node name="UI" parent="." unique_id=1980193790 instance=ExtResource("4_u5sy4")]
+visible = false
 
 [node name="Goal" type="Area2D" parent="." unique_id=2062163517]
 
@@ -58,6 +60,9 @@ hframes = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spike" unique_id=1045361270]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_qpk70")
+
+[node name="Enemy" parent="." unique_id=2118616187 instance=ExtResource("8_gee14")]
+position = Vector2(417, 229)
 
 [connection signal="body_entered" from="Goal" to="." method="_on_goal_body_entered"]
 [connection signal="body_entered" from="Coin" to="." method="_on_coin_body_entered"]

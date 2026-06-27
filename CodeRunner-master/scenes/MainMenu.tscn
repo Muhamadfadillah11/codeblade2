@@ -431,7 +431,7 @@ theme_override_constants/separation = -8
 
 [node name="TitleLabel" type="Label" parent="MainMenuPanel/MarginContainer/VBoxContainer2" unique_id=879199037]
 layout_mode = 2
-text = "Code Runner"
+text = "Code Blade"
 label_settings = SubResource("LabelSettings_lulne")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -702,5 +702,6 @@ expand_icon = true
 [connection signal="pressed" from="MainMenuPanel/MarginContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="MainMenuPanel/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MainMenuPanel/MarginContainer/VBoxContainer/LevelButton" to="." method="_on_level_button_pressed"]
+[connection signal="pressed" from="MainMenuPanel/MarginContainer2/VBoxContainer2/SettingButton" to="." method="_on_setting_button_pressed"]
 [connection signal="pressed" from="MainMenuPanel/MarginContainer2/VBoxContainer2/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="LevelSelectPanel/Content/BackButton" to="." method="_on_back_button_pressed"]

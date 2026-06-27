@@ -47,6 +47,11 @@ func execute_command(command):
 		"jump_left":
 			return await player.jump_left()
 
+		"attack":
+			player.tebas()
+			await  game.get_tree().create_timer(0.3).timeout
+			return true
+			
 		"repeat":
 			return await execute_repeat(command)
 
